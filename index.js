@@ -16,7 +16,9 @@ app.use(
     credentials: true,
   })
 );
-
+app.get("/", (req, res) => {
+  res.send("Backend API is live 🎉");
+});
 // Serve static files from the uploads folder
 app.use("/uploads", express.static("uploads"));
 
